@@ -1,0 +1,25 @@
+spring:
+  application:
+    # 服务名称
+    name: spring-cloud-eureka-server-replica
+
+server:
+  # 端口号
+  port: 8762
+
+eureka:
+  instance:
+    hostname: eureka2
+  client:
+    service-url:
+      # 默认注册地址
+      defaultZone: http://eureka1:8761/eureka/
+    # 当前服务是否注册到eureka
+    register-with-eureka: true
+    # 表示eurekaServer是否获取服务地址
+    fetch-registry: true
+
+#  server:
+#    # Eureka自我保护机制
+#    enable-self-preservation: true
+
