@@ -30,6 +30,7 @@ public class HelloController {
         System.out.println("传入url:"+"http://product/test"+"?name="+name);
         return restTemplate.getForObject("http://product/test"+"?name="+name,String.class   );
     }
+    // 数据传输有问题
     @PostMapping("post")
     public String post(@RequestBody Map<String,String> product){
         System.out.println("传入参数为:"+product);
