@@ -3,10 +3,7 @@ package com.springboot.product.controller;
 import com.springboot.product.entity.Product;
 import com.springboot.product.service.ProductSerivce;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 //@RequestMapping("/product")
@@ -16,8 +13,13 @@ public class ProductController {
     private ProductSerivce productService;
 
     @GetMapping("test")
-    public String test(@RequestBody Product product) {
-        return "test：" + product.toString();
+    public String test(@RequestParam("name") String name) {
+        return "test：" + name;
+    }
+
+    @RequestMapping("post")
+    public String post(@RequestBody Product product) {
+        return "post：" + product.toString();
     }
 
     @RequestMapping("selectProduct")

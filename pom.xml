@@ -15,6 +15,7 @@
     <modules>
         <module>devtools</module>
         <module>product</module>
+        <module>consumer</module>
     </modules>
     <packaging>pom</packaging>
 

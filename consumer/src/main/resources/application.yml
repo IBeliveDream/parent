@@ -1,0 +1,15 @@
+server:
+  # 端口号
+  port: 8080
+spring:
+  application:
+    name: spring-provide
+eureka:
+  client:
+    service-url:
+      # 默认注册地址
+      defaultZone: http://localhost:8761/eureka/
+      # 当前服务是否注册到eureka
+      register-with-eureka: true
+      # 表示eurekaServer是否获取服务地址
+      fetch-registry: true
