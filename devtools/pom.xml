@@ -16,6 +16,7 @@
     <modules>
         <module>eureka</module>
         <module>eureka-replica</module>
+        <module>mybatis-generator</module>
     </modules>
 
     <packaging>pom</packaging>
