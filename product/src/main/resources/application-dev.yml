@@ -1,11 +1,11 @@
-server:
-  # 端口号
-  port: 8082
+#server:
+#  # 端口号
+#  port: 8082
 
 spring:
-  application:
+#  application:
     # 服务名称
-    name: product
+#    name: product
   # 连接数据库
   datasource:
     username: root

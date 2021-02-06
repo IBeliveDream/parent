@@ -13,9 +13,9 @@ eureka:
   client:
     service-url:
       # 默认注册地址
-#      defaultZone: http://localhost:${server.port}/eureka/
+      defaultZone: http://localhost:${server.port}/eureka/
       # 双服务中心
-      defaultZone: http://eureka2:8762/eureka/
+#      defaultZone: http://eureka2:8762/eureka/
     # 当前服务是否注册到eureka
     register-with-eureka: true
     # 表示eurekaServer是否获取服务地址

@@ -12,6 +12,11 @@ public class ProductController {
     @Autowired
     private ProductSerivce productService;
 
+    @GetMapping("hello")
+    public String hello() {
+        return "Hello ";
+    }
+
     @GetMapping("test")
     public String test(@RequestParam("name") String name) {
         return "test：" + name;
