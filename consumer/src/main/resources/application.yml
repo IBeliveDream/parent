@@ -4,13 +4,11 @@ server:
 spring:
   application:
     # 项目名称
-    name: spring-provide
-eureka:
-  client:
-    service-url:
-      # 默认注册地址
-      defaultZone: http://localhost:8761/eureka/
-      # 当前服务是否注册到eureka
-      register-with-eureka: true
-      # 表示eurekaServer是否获取服务地址
-      fetch-registry: true
+    name: spring-consumer
+
+logging:
+  level:
+    # 显示日志级别
+    com.springboot.provide.consumer.controller.IHelloControllerFeign: debug
+    # 取消注册中心定时回复日志显示（info级别）
+    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN

@@ -27,7 +27,7 @@ public class IHelloController {
 
     @GetMapping("/hello")
     public String sayHello(@RequestParam("name") String name){
-        return iHelloControllerFeign.sayHello();
+        return iHelloControllerFeign.hello(name);
 //        return name;
     }
 }

@@ -13,8 +13,8 @@ public class ProductController {
     private ProductSerivce productService;
 
     @GetMapping("hello")
-    public String hello() {
-        return "Hello ";
+    public String hello(@RequestParam("name") String name) {
+        return "Hello "+ name;
     }
 
     @GetMapping("test")
