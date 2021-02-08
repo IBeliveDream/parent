@@ -1,3 +1,17 @@
+spring:
+  application:
+    name: spring-consumer
+  cloud:
+    config:
+      discovery:
+        # 启动远程配置文件
+        enabled: true
+        # 配置文件 服务器
+        service-id: SPRING-CONFIG-SERVICE
+#      # 配置文件类别
+#      profile:  prd
+
+
 eureka:
   client:
     service-url:
@@ -7,32 +21,3 @@ eureka:
       register-with-eureka: true
       # 表示eurekaServer是否获取服务地址
       fetch-registry: true
-
-
-#feign:
-#  compression:
-#    request:
-#      # 开启压缩
-#      enabled: true
-#      # 最小压缩
-#      min-request-size: 2048
-#      # 压缩类型
-#      mime-types: text/xml
-#  response:
-#    # 返回结果压缩
-#    enabled: true
-
-#
-feign:
-  httpclient:
-    enabled: false
-  okhttp:
-    enabled: true
-#
-#clientName:
-#  ribbon:
-#    NFLoadBalncerClass:  配置ILoadBalancer的实现类
-#    NFLoadBalancerRuleClassNam: 配置IRule的实现类
-#    NFLoadBalancerPingClassName: 配置IPing的实现类
-#    NFWSServerListClassName:  配置ServerList的实现类
-#    NIWSServerListFilterClassName: 配置ServerListFilter的实现类

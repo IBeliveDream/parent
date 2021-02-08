@@ -4,7 +4,7 @@ server:
 spring:
   application:
     # 项目名称
-    name: spring-configservice
+    name: spring-config-service
   # 配置文件获取位置(本地，使用git注释掉)
 #  profiles:
 #    active: native
@@ -12,7 +12,7 @@ spring:
   cloud:
     config:
       server:
-        native:
+#        native:
 #          # 配置本地路径 （使用git注释掉）
 #          search-locations: file:D:/1a/config/
 
@@ -22,6 +22,7 @@ spring:
 #          search-paths: config
 #          # git项目路径
           uri: https://gitee.com/IBeliveDream/spring-cloud-config-server.git
+#           uri: https://github.com/IBeliveDream/spring-cloud-config-server.git
 #          # git账号
 #          username:
 #          # git密码
@@ -36,3 +37,12 @@ spring:
 #    # 取消注册中心定时回复日志显示（info级别）
 #    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
 
+eureka:
+  client:
+    service-url:
+      # 默认注册地址
+      defaultZone: http://localhost:8761/eureka/
+      # 当前服务是否注册到eureka
+      register-with-eureka: true
+      # 表示eurekaServer是否获取服务地址
+      fetch-registry: true

@@ -1,14 +1,53 @@
-server:
-  # 端口号
-  port: 8080
-spring:
-  application:
-    # 项目名称
-    name: spring-consumer
-
-logging:
-  level:
-    # 显示日志级别
-    com.springboot.provide.consumer.controller.IHelloControllerFeign: debug
-    # 取消注册中心定时回复日志显示（info级别）
-    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
+#server:
+#  # 端口号
+#  port: 8088
+#spring:
+#  application:
+#    # 项目名称
+#    name: spring-consumer
+#
+#eureka:
+#  client:
+#    service-url:
+#      # 默认注册地址
+#      defaultZone: http://localhost:8761/eureka/
+#      # 当前服务是否注册到eureka
+#      register-with-eureka: true
+#      # 表示eurekaServer是否获取服务地址
+#      fetch-registry: true
+#
+#
+##feign:
+##  compression:
+##    request:
+##      # 开启压缩
+##      enabled: true
+##      # 最小压缩
+##      min-request-size: 2048
+##      # 压缩类型
+##      mime-types: text/xml
+##  response:
+##    # 返回结果压缩
+##    enabled: true
+#
+##
+#feign:
+#  httpclient:
+#    enabled: false
+#  okhttp:
+#    enabled: true
+##
+##clientName:
+##  ribbon:
+##    NFLoadBalncerClass:  配置ILoadBalancer的实现类
+##    NFLoadBalancerRuleClassNam: 配置IRule的实现类
+##    NFLoadBalancerPingClassName: 配置IPing的实现类
+##    NFWSServerListClassName:  配置ServerList的实现类
+##    NIWSServerListFilterClassName: 配置ServerListFilter的实现类
+#
+#logging:
+#  level:
+#    # 显示日志级别
+#    com.springboot.provide.consumer.controller.IHelloControllerFeign: debug
+#    # 取消注册中心定时回复日志显示（info级别）
+#    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
