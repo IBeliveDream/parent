@@ -1,0 +1,41 @@
+server:
+    # 端口号
+    port: 8083
+spring:
+  application:
+    # 项目名称
+    name: spring-configservice
+  # 配置文件获取位置(本地)
+  profiles:
+    active: native
+
+  cloud:
+    config:
+      server:
+        native:
+          # 配置本地路径
+          search-locations: file:D:/1a/config/
+
+#        # 配置文件获取位置（git）
+#        git:
+#          # 配置项目下的相对路径 （项目下某个文件夹）
+#          search-paths: config
+#          # git项目路径
+#          uri: https://gitee.com/IBeliveDream/spring-cloud-config-server.git
+#          # git账号
+#          username: IBeliveDream
+#          # git密码
+#          password: 1314.wang
+#          # 指定读取配置文件的存放路径
+#          basedir:
+#          uri: https://github.com/IBeliveDream/spring-cloud-config-server.git
+#          username: 1220298776@qq.com
+#          password: wangjin2333
+
+#logging:
+#  level:
+#    # 显示日志级别
+#    com.springboot.provide.consumer.controller.IHelloControllerFeign: debug
+#    # 取消注册中心定时回复日志显示（info级别）
+#    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
+
